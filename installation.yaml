@@ -1,0 +1,14 @@
+---
+- name: installing packeges
+  hosts: all
+  become: yes
+  tasks:
+  - name: isntallation of packages
+    yum:
+      name: git
+      name: tree
+      name: httpd
+  - name: starting of a service
+    service:
+      name: httpd
+      state: started    

@@ -1,0 +1,9 @@
+---
+- name: creating a file to nodes
+  hosts: all
+  become: yes
+  tasks:
+  - name: creating file a1
+    file:
+      path: /home/ansible/a1
+      state: touch 

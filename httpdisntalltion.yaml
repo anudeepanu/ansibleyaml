@@ -1,0 +1,10 @@
+---
+- name: installing packeges
+  hosts: all
+  become: yes
+  tasks:
+  - name: isntallation of packages
+    yum:
+      name: httpd
+      state: present
+  
