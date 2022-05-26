@@ -1,0 +1,9 @@
+---
+- name: copying a file from master to nodes
+  become: yes
+  hosts: all
+  tasks:
+  - name: copying index.html to nodes
+    copy:
+      src: /home/ansible/instllationyaml/index.html
+      dest: /home/ansible/index.html

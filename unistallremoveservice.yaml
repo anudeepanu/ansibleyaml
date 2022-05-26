@@ -1,0 +1,16 @@
+---
+- name: uninstalling services
+  become: yes
+  hosts: all
+  tasks:
+  - name: stooping the service
+    service:
+      name: httpd
+      state: stopped
+  - name: removing httpd tree 
+    yum:
+      name: httpd
+      name: tree
+      state: absent
+
+
